@@ -1,0 +1,73 @@
+.BHC-extensions {
+    position: fixed;
+    z-index: 10000;
+    background: #fafafa;
+    top: 0;
+    width: 400px;
+    transform: translate(-400px, 0);
+    border-right: 1px solid #cacaca;
+    box-shadow: 0 5px 20px #0005;
+    transition: 0.4s;
+}
+.BHC-extensions:hover {
+    transform: translate(0, 0);
+}
+
+.BHC-extensions:hover .show-list-btn {
+    opacity: 0;
+}
+
+.BHC-extensions ol {
+    list-style: decimal;
+    height: 100vh;
+    overflow: auto;
+    margin: 20px 20px 0 40px;
+}
+.BHC-extensions ol::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color:rgba(0,0,0,0);
+}
+
+.BHC-extensions li {
+    padding-bottom: 30px;
+    color: #333;
+    font-size: 14px;
+    list-style: decimal;
+}
+
+.BHC-extensions li a {
+    margin-bottom: 20px;
+    font-size: 14px;
+    vertical-align: bottom;
+    color: #3089fc;
+}
+.BHC-extensions li a:hover {
+   text-decoration: underline;
+}
+.BHC-extensions .list-cover {
+    width: 160px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.BHC-extensions .video-title {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.BHC-extensions .show-list-btn {
+    position: absolute;
+    top: 40%;
+    width: 10px;
+    right: -35px;
+    padding: 5px 15px;
+    border-left: none;
+    background: #f45a8d;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 5px #f45a8d;
+    transition: 0.4s;
+    color: #fff;
+    opacity: 1;
+}
