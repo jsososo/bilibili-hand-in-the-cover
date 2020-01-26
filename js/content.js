@@ -11,7 +11,16 @@
 
   var generateBHC = function () {
     getVideoInfo();
-    var cards = $('.home-card, .spread-module, .video.matrix, .video-container, .fav-video-list .small-item, .content .small-item, .video-page-card');
+    var cards = $('.home-card,' +
+      '.spread-module,' +
+      '.video.matrix,' +
+      '.video-container,' +
+      '.fav-video-list .small-item,' +
+      '.content .small-item,' +
+      '.video-page-card,' +
+      '.video-card-common,' +
+      '.video-card-reco,' +
+      '.video-list .video-item');
     BHC = [];
     if (PAGE_VIDEO_INFO.img) {
       BHC.push(PAGE_VIDEO_INFO);
@@ -21,8 +30,8 @@
       var src = $c.find('img').attr('src');
       if (src) {
         BHC.push({
-          title: $c.find('.title, p.t').text(),
-          href: $c.find('.title').attr('href') || '',
+          title: $c.find('.title, p.t, .info .headline a').text(),
+          href: $c.find('.title, a').attr('href') || '',
           img: src.replace(/@.+/, ''),
         });
       }
